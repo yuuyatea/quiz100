@@ -17,7 +17,7 @@ while(1){
  $return_message_text='';
   if(strpos($return_message_text,'じゃねー') !== false){
    $return_message_text="(*´ω｀)"
- }
+ };
 
 
   //メッセージタイプが「text」以外のときは何も返さず終了

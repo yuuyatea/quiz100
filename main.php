@@ -10,6 +10,8 @@ $replyToken = $json_object->{"events"}[0]->{"replyToken"};        //返信用ト
 $message_type = $json_object->{"events"}[0]->{"message"}->{"type"};    //メッセージタイプ
 $message_text = $json_object->{"events"}[0]->{"message"}->{"text"};    //メッセージ内容
 
+echo $message_text;
+
 //メッセージタイプが「text」以外のときは何も返さず終了
 if($message_type != "text") exit;
 

@@ -13,13 +13,16 @@ while(1){
   $message_type = $json_object->{"events"}[0]->{"message"}->{"type"};    //メッセージタイプ
   $message_text = $json_object->{"events"}[0]->{"message"}->{"text"};    //メッセージ内容
 
+  if(strpos($subject,'じゃねー') !== false){
+   $return_message_text="(*´ω｀)"
+ }
 
 
   //メッセージタイプが「text」以外のときは何も返さず終了
   if($message_type != "text") exit;
 
   //返信メッセージ
-  $return_message_text = "「" . $message_text . "」じゃねーｗｗｗ";
+  $return_message_text = "「" . $message_text . "」じゃねーｗｗ";
 
   //返信実行
   sending_messages($accessToken, $replyToken, $message_type, $return_message_text);

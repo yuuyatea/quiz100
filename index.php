@@ -13,7 +13,7 @@ while(1){
   $message_type = $json_object->{"events"}[0]->{"message"}->{"type"};    //メッセージタイプ
   $message_text = $json_object->{"events"}[0]->{"message"}->{"text"};    //メッセージ内容
 
-  if(strpos($subject,'じゃねー') !== false){
+  if(strpos($return_message_text,'じゃねー') !== false){
    $return_message_text="(*´ω｀)"
  }
 
